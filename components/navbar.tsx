@@ -12,17 +12,17 @@ export default function Navbar() {
   const cartCount = items.reduce((acc, item) => acc + item.quantity, 0);
 
     return(
-        <nav className="sticky top-0 z-50 bg-white shadow">
-        <div className="container mx-auto flex items-center justify-between px-4 py-4">
+        <nav className="sticky top-0 z-50 bg-white shadow max-h-fit">
+        <div className="container mx-auto flex items-center justify-between px-4 py-4 h-full">
            <Link href="/" className="hover:text-blue-600">EcomTut</Link>
         
         <div className="hidden md:flex space-x-6">
-           <Link href="/">Home</Link>
-           <Link href="/products" className="hover:text-blue-600">
+           <Link href="/" className="hover:text-blue-600 hover:border-b  hover:border-b-blue-600">Home</Link>
+           <Link href="/products" className="hover:text-blue-600 hover:border-b hover:border-b-blue-600">
                 Products
             </Link>
-           <Link href="/checkout" className="hover:text-blue-600">
-               CheckOut
+           <Link href="/checkout" className="hover:text-blue-600 hover:border-b hover:border-b-blue-600">
+               Checkout
             </Link>
             </div>
         <div className="flex items-center space-x-4">
